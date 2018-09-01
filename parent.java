@@ -1,14 +1,31 @@
+class A
+{
+void fun()
+{
+System.out.println(" parent class");
+}
+}
+class B extends A
+{
+void fun()
+{
+System.out.println(" child class");
+}
+void fun1()
+{
+System.out.println("calling parent class");
+}
+void display()
+{
+fun();
+super.fun();
+}
+}
 class Parent
 {
-public void show()
+public static void main(String args[])
 {
-System.out.println("hello world");
-}
-}
-class child extends Parent
-{
-public void show()
-{
-System.out.println("hello chitkara");
+B n=new B();
+n.display();
 }
 }
